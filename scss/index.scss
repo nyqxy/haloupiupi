@@ -1,0 +1,278 @@
+body {
+    font-size: 10px;
+    background-color: #FFf;
+    font-family: "ヒラギノ角ゴ ProN";
+    font-family: "Hiragino Sans";
+    font-weight: 300;
+    // color: #3C3C3C;
+}
+
+.wrapper {
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.mincho {
+    font-family: "ヒラギノ明朝 ProN", "HiraMinProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+
+.img_350 {
+    width: 350px;
+}
+
+
+
+
+
+main {
+    .mv {
+        background: url(../img/mv_bg.jpg) no-repeat;
+        background-size: cover;
+        padding: 480px 0 40px;
+        margin-bottom: 100px;
+
+        .mv_area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+
+            h2 {
+                font-size: 1.5em;
+                margin: 0 0 25px;
+            }
+
+            h1 {
+                font-size: 4.4em;
+                font-weight: 300;
+                line-height: 66px;
+                text-align: center;
+
+                span {
+                    font-size: .9em;
+                }
+
+                margin: 0 0 35px;
+            }
+
+            p {
+                letter-spacing: 4px;
+            }
+        }
+
+        .scroll {
+            position: relative;
+            text-align: center;
+            font-size: 1.3em;
+            letter-spacing: 4px;
+            color: rgba(0, 0, 0, .5);
+        }
+
+        .scroll::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 25px;
+            left: 47%;
+            width: 20px;
+            height: 20px;
+            border-bottom: 1px rgba(0, 0, 0, .5) solid;
+            border-left: 1px rgba(0, 0, 0, .5) solid;
+            transform: rotate(-45deg);
+            animation: scroll 2s infinite;
+        }
+
+        .scroll::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 35px;
+            left: 47%;
+            width: 20px;
+            height: 20px;
+            border-bottom: 1px rgba(0, 0, 0, .5) solid;
+            border-left: 1px rgba(0, 0, 0, .5) solid;
+            transform: rotate(-45deg);
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+            }
+
+            50% {
+                transform: translateY(20px) rotate(-45deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+    }
+
+    .nav_area {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .kihon a {
+            position: relative;
+            display: block;
+            text-align: center;
+            font-size: 2.3em;
+            letter-spacing: 2px;
+            font-weight: 500;
+            background-color: #83a4d4;
+            background: linear-gradient(270deg, #83a4d4 0%, #b6fbff 100%);
+            padding: 42px 0 42px;
+            color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .2);
+            margin: 0 0 30px;
+            transition: .5s;
+        }
+
+        .kihon a::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "基本の使い方";
+            padding: 42px 0 42px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #83a4d4 0%, #b6fbff 100%);
+            transition: .5s;
+        }
+
+        .kihon a:hover::after {
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .kihon a::before {
+            position: absolute;
+            bottom: 20px;
+            left: 47%;
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-bottom: #fff 2px solid;
+            border-left: #fff 2px solid;
+            transform: rotate(-45deg);
+            z-index: 2000;
+        }
+
+        .type_list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            a {
+                display: block;
+                width: 50%;
+            }
+
+            li {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                background-color: #b6fbff;
+                font-size: 2.1em;
+                font-weight: 500;
+                line-height: 32px;
+                padding: 174px 0 30px;
+                color: #555555;
+            }
+
+            li::after {
+                position: absolute;
+                bottom: 15px;
+                left: 47%;
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-bottom: #555555 2px solid;
+                border-left: #555555 2px solid;
+                transform: rotate(-45deg);
+                transition: .3s;
+
+            }
+
+            li:hover::after {
+                bottom: 10px;
+                transition: .3s;
+            }
+
+            li.nachu {
+                background: url(../img/li_nachu.jpg) no-repeat;
+                background-size: 100%;
+            }
+
+            li.hade {
+                background: url(../img/li_hade.jpg) no-repeat;
+                background-size: 100%;
+            }
+
+            li.aimake {
+                background: url(../img/li_aimake.jpg) no-repeat;
+                background-size: 100%;
+            }
+
+            li.nayami {
+                background: url(../img/li_nayami.jpg) no-repeat;
+                background-size: 100%;
+            }
+        }
+
+        .nakajima_btn {
+            background: linear-gradient(90deg, #ECE9E6 0%, #FFFFFF 100%);
+            padding: 50px 36px 20px;
+
+            .txt_box {
+                .sub {
+                    font-size: 2em;
+                    margin-bottom: 20px;
+                }
+
+                .main_ttl {
+                    font-size: 3.2em;
+                    line-height: 45px;
+                    margin-bottom: 20px;
+
+                    span {
+                        font-size: 37px;
+                    }
+                }
+            }
+
+            .more_btn {
+                position: relative;
+                right: 15px;
+                font-size: 1.4em;
+                text-align: end;
+                opacity: .5;
+            }
+
+            .more_btn::after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -12px;
+                top: 4px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 5px solid #000;
+            }
+        }
+    }
+    .kihon_area {
+        height: 500px;
+        background-color: #b6fbff;
+        text-align: center;
+        font-size: 2em;
+    }
+}
