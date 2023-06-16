@@ -16,8 +16,20 @@ body {
   font-family: "ヒラギノ明朝 ProN", "HiraMinProN", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 }
 
+.img_300 {
+  width: 300px;
+}
+
 .img_350 {
   width: 350px;
+}
+
+.img_242 {
+  width: 242px;
+}
+
+.img_140 {
+  width: 140px;
 }
 
 main .mv {
@@ -283,4 +295,591 @@ main .kihon_area {
   background-color: #b6fbff;
   text-align: center;
   font-size: 2em;
+}
+main .type_area {
+  width: 100%;
+  padding: 110px 0px 0;
+}
+main .type_area .type_box {
+  width: 390px;
+  margin: 0 auto 150px;
+}
+main .type_area .type_box .ttl {
+  display: inline-block;
+  font-size: 2.8em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(77%, transparent), color-stop(20%, #B5DBCD));
+  background: linear-gradient(transparent 77%, #B5DBCD 20%);
+  margin-bottom: 50px;
+  margin-left: 20px;
+  padding-bottom: 2px;
+}
+main .type_area .type_box .img {
+  width: 300px;
+  margin: 0 auto;
+}
+main .type_area .type_box .main_txt {
+  position: relative;
+  font-size: 2.1em;
+  line-height: 32px;
+  background-color: #555555;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#C1E0D4), to(#fff));
+  background: linear-gradient(90deg, #C1E0D4 0%, #fff 100%);
+}
+main .type_area .type_box .main_txt span {
+  font-weight: 500;
+  color: #189A9A;
+}
+main .type_area .type_box .main_txt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+main .type_area .type_box .shiyou_box {
+  margin: 0 20px 50px;
+}
+main .type_area .type_box .shiyou_box .shiyou_ttl {
+  font-size: 1.2em;
+  margin: 0 0 5px;
+}
+main .type_area .type_box .shiyou_box .shiyou_txt_box {
+  font-size: 1.4em;
+  line-height: 22px;
+  background-color: #E3F8F0;
+  padding: 15px;
+  text-align: justify;
+}
+main .type_area .type_box .bg_area {
+  padding: 0 20px 30px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(5%, #DCECE6), color-stop(5%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(5%, #DCECE6), color-stop(5%, transparent));
+  background-image: linear-gradient(-90deg, #DCECE6 5%, transparent 5%), linear-gradient(0deg, #DCECE6 5%, transparent 5%);
+  background-size: 10px 10px;
+}
+main .type_area .type_box .sub_txt_box .tekiryo {
+  font-size: 1.6em;
+  color: #fff;
+  font-weight: 200;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #96CBB7;
+  margin: 0 0 15px;
+}
+main .type_area .type_box .sub_txt_box .sub_txt {
+  font-size: 1.8em;
+  line-height: 32px;
+  text-align: justify;
+  margin: 0 0 40px;
+}
+main .type_area .type_box .sub_txt_box .sub_txt span {
+  font-weight: 500;
+  color: #189A9A;
+}
+main .type_area .type_box .zu {
+  margin: 0 0 40px;
+}
+main .type_area .type_box .check_txt_area .check_ttl {
+  font-size: 1.4em;
+  color: #189A9A;
+  margin: 0 0 10px;
+}
+main .type_area .type_box .check_txt_area .txt_box {
+  font-size: 1.8em;
+  line-height: 28px;
+  background-color: #E3F8F0;
+  border: #189A9A 1px solid;
+  padding: 25px 18px;
+}
+main .type_area .type_box .check_txt_area .txt_box span {
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(30%, #FBEE79));
+  background: linear-gradient(transparent 60%, #FBEE79 30%);
+}
+main .type_area .type_box .use_area .use_ttl {
+  font-size: 1.4em;
+  color: #E85968;
+  margin: 0 0 25px;
+}
+main .type_area .type_box .use_area .use_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 35px;
+  margin-bottom: 40px;
+}
+main .type_area .type_box .use_area .use_list .list_box {
+  position: relative;
+  background-color: #FFDADE;
+  border: #E85968 1px solid;
+  font-size: 1.8em;
+  text-align: justify;
+  line-height: 28px;
+  padding: 20px;
+}
+main .type_area .type_box .use_area .use_list .list_box span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(30%, #FBEE79));
+  background: linear-gradient(transparent 60%, #FBEE79 30%);
+}
+main .type_area .type_box .use_area .use_list .list_box::before {
+  content: "1";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: #E85968 1px dashed;
+  color: #E85968;
+  text-align: center;
+  padding: 5px 0 0;
+}
+main .type_area .type_box .use_area .use_list .list_box:nth-child(2)::before {
+  content: "2";
+}
+main .type_area .type_box .use_area .use_list .list_box:nth-child(3)::before {
+  content: "3";
+}
+main .type_area .type_box .use_area .use_list .list_box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -28px;
+  left: 46%;
+  width: 20px;
+  height: 15px;
+  border-top: 12px solid #E85968;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+main .type_area .type_box .use_area .use_list .list_box:last-child::after {
+  content: none;
+}
+main .type_area .type_box .check_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+  padding: 30px 30px 30px 60px;
+  background-color: #DFF5F9;
+}
+main .type_area .type_box .check_box .check_list {
+  position: relative;
+  font-size: 18px;
+}
+main .type_area .type_box .check_box .check_list::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+  background-color: #EEEEEE;
+  border: #0BA2D1 1px solid;
+}
+main .type_area .type_box .check_box .check_list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: -31px;
+  width: 20px;
+  height: 12px;
+  border-bottom: #000 1px solid;
+  border-left: #000 1px solid;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+main .type_area .type_box.hade_area .ttl {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(77%, transparent), color-stop(20%, #FFC1C7));
+  background: linear-gradient(transparent 77%, #FFC1C7 20%);
+}
+main .type_area .type_box.hade_area .main_txt {
+  background: -webkit-gradient(linear, left top, right top, from(#FFCACF), to(#fff));
+  background: linear-gradient(90deg, #FFCACF 0%, #fff 100%);
+}
+main .type_area .type_box.hade_area .main_txt span {
+  font-weight: 500;
+  color: #E85968;
+}
+main .type_area .type_box.hade_area .bg_area {
+  padding-bottom: 1px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(5%, #FFDADE), color-stop(5%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(5%, #FFDADE), color-stop(5%, transparent));
+  background-image: linear-gradient(-90deg, #FFDADE 5%, transparent 5%), linear-gradient(0deg, #FFDADE 5%, transparent 5%);
+}
+main .type_area .type_box.hade_area .shiyou_txt_box {
+  background-color: #FFDADE;
+}
+main .type_area .type_box.hade_area .tekiryo {
+  background-color: #FFA6AF;
+}
+main .type_area .type_box.hade_area .sub_txt span {
+  color: #E85968;
+}
+main .type_area .type_box.aimake_area .ttl {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(77%, transparent), color-stop(20%, #85D1E8));
+  background: linear-gradient(transparent 77%, #85D1E8 20%);
+}
+main .type_area .type_box.aimake_area .main_txt {
+  background: -webkit-gradient(linear, left top, right top, from(#DFF5F9), to(#fff));
+  background: linear-gradient(90deg, #DFF5F9 0%, #fff 100%);
+}
+main .type_area .type_box.aimake_area .main_txt span {
+  font-weight: 500;
+  color: #0BA2D1;
+}
+main .type_area .type_box.aimake_area .shiyou_ttl {
+  font-size: 1.4em;
+  color: #0BA2D1;
+  margin-bottom: 10px;
+}
+main .type_area .type_box.aimake_area .bg_area {
+  padding-top: 10px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(5%, #DAE5F2), color-stop(5%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(5%, #DAE5F2), color-stop(5%, transparent));
+  background-image: linear-gradient(-90deg, #DAE5F2 5%, transparent 5%), linear-gradient(0deg, #DAE5F2 5%, transparent 5%);
+}
+main .type_area .type_box.aimake_area .sub_txt span {
+  color: #0BA2D1;
+}
+main .type_area .type_box.aimake_area .zu {
+  margin-bottom: 20px;
+}
+main .type_area .type_box.aimake_area .use_list .list_box {
+  background-color: #DFF5F9;
+  border: #0BA2D1 1px solid;
+}
+main .type_area .type_box.aimake_area .use_list .list_box::before {
+  border-color: #0BA2D1;
+  color: #0BA2D1;
+}
+main .type_area .type_box.aimake_area .use_list .list_box:nth-child(4):before {
+  content: "3";
+}
+main .type_area .type_box.aimake_area .use_list .list_box::after {
+  border-top: 15px solid #0BA2D1;
+}
+main .type_area .type_box.aimake_area .use_list .list_box:nth-child(2):after {
+  bottom: -325px;
+}
+main .type_area .type_box.aimake_area .use_list .list_img {
+  margin: -20px auto 0;
+}
+main .type_area .type_box.aimake_area .check_ttl {
+  color: #0BA2D1;
+}
+main .type_area .type_box.aimake_area .txt_box {
+  background-color: #DFF5F9;
+  border-color: #0BA2D1;
+}
+main .type_area .type_box.nayami_area .ttl {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(77%, transparent), color-stop(20%, #F5BF80));
+  background: linear-gradient(transparent 77%, #F5BF80 20%);
+}
+main .type_area .type_box.nayami_area .main_txt {
+  background: -webkit-gradient(linear, left top, right top, from(#FFF5E3), to(#fff));
+  background: linear-gradient(90deg, #FFF5E3 0%, #fff 100%);
+}
+main .type_area .type_box.nayami_area .main_txt span {
+  font-weight: 500;
+  color: #EC7F00;
+}
+main .type_area .type_box.nayami_area .shiyou_ttl {
+  font-size: 1.4em;
+  color: #EC7F00;
+  margin-bottom: 10px;
+}
+main .type_area .type_box.nayami_area .shiyou_txt_box {
+  font-size: 1.8em;
+  line-height: 32px;
+  background-color: #FFF5E3;
+}
+main .type_area .type_box.nayami_area .check_box {
+  background-color: #fff;
+  border: #EC7F00 1px solid;
+}
+main .type_area .type_box.nayami_area .check_list::before {
+  border-color: #EC7F00;
+}
+main .type_area .type_box.nayami_area .bg_area {
+  padding-top: 10px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(5%, #FCEACA), color-stop(5%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(5%, #FCEACA), color-stop(5%, transparent));
+  background-image: linear-gradient(-90deg, #FCEACA 5%, transparent 5%), linear-gradient(0deg, #FCEACA 5%, transparent 5%);
+}
+main .type_area .type_box.nayami_area .use_list .list_box {
+  background-color: #FFF5E3;
+  border-color: #EC7F00;
+}
+main .type_area .type_box.nayami_area .use_list .list_box::before {
+  border-color: #EC7F00;
+  color: #EC7F00;
+}
+main .type_area .type_box.nayami_area .use_list .list_box::after {
+  border-top: 15px solid #EC7F00;
+}
+main .type_area .type_box.nayami_area .check_ttl {
+  color: #EC7F00;
+}
+main .type_area .type_box.nayami_area .txt_box {
+  background-color: #FFF5E3;
+  border-color: #EC7F00;
+}
+main .nakajima_area .ttl_area {
+  padding: 0 20px;
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl {
+  font-size: 2em;
+  line-height: 28px;
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl span {
+  padding: 2px;
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl span:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(50%, #FFDADE));
+  background: linear-gradient(transparent 30%, #FFDADE 50%);
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl span:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(50%, #FFF5E3));
+  background: linear-gradient(transparent 30%, #FFF5E3 50%);
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl span:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(50%, #DFF5F9));
+  background: linear-gradient(transparent 30%, #DFF5F9 50%);
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl span:nth-child(4) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(50%, #E3F8F0));
+  background: linear-gradient(transparent 30%, #E3F8F0 50%);
+}
+main .nakajima_area .ttl_area .nakajima_sub_ttl span:nth-child(5) {
+  font-size: 18px;
+}
+main .nakajima_area .ttl_area .nakajima_ttl {
+  font-size: 3.2em;
+  line-height: 45px;
+  margin-bottom: 10px;
+}
+main .nakajima_area .ttl_area .nakajima_ttl span {
+  font-size: 37px;
+}
+main .nakajima_area .img {
+  text-align: center;
+  margin-bottom: 70px;
+}
+main .nakajima_prf {
+  margin: 110px 20px 70px;
+  border: #0BA2D1 1px solid;
+  padding: 18px 15px;
+}
+main .nakajima_prf .ttl {
+  font-size: 1.9em;
+  margin-bottom: 16px;
+}
+main .nakajima_prf .ttl span {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+}
+main .nakajima_prf .txt {
+  font-size: 1.6em;
+  line-height: 26px;
+  text-align: justify;
+}
+
+/* アコーディオン */
+.aco_area {
+  padding: 0 20px;
+}
+
+.aco_box {
+  margin-bottom: 50px;
+}
+
+.aco_box span {
+  color: #C90000;
+}
+
+.aco_ttl {
+  display: inline-block;
+  font-size: 1.6em;
+  color: #0BA2D1;
+  border-bottom: #0BA2D1 1px solid;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.read-more-002 {
+  position: relative;
+}
+
+.read-more-002 p {
+  display: -webkit-box;
+  position: relative;
+  margin-bottom: 0;
+  font-size: 1.8em;
+  line-height: 30px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  /* 開く前に見せたい行数を指定 */
+}
+
+.read-more-002:has(:checked) p {
+  display: block;
+}
+
+.read-more-002 p::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0deg, 0%, 100%, 0)), color-stop(50%, hsla(0deg, 0%, 100%, 0.9)), color-stop(0, hsla(0deg, 0%, 100%, 0.9)), to(#fff));
+  background: linear-gradient(180deg, hsla(0deg, 0%, 100%, 0) 0, hsla(0deg, 0%, 100%, 0.9) 50%, hsla(0deg, 0%, 100%, 0.9) 0, #fff);
+  content: "";
+}
+
+.read-more-002:has(:checked) p::after {
+  content: none;
+}
+
+.read-more-002 label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 4px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #000000;
+  font-size: 1.6em;
+}
+
+.read-more-002 label:hover {
+  color: #0ba2d1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.read-more-002:has(:checked) label {
+  display: none;
+}
+
+.read-more-002 label::after {
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background-color: #b6bdc3;
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
+  content: "";
+}
+
+.read-more-002 input {
+  display: none;
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#EDEAE7), to(#FFFFFF));
+  background: linear-gradient(#EDEAE7 0%, #FFFFFF 100%);
+  padding: 35px 0 10px;
+}
+footer .footer_area {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer_area .txt {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+footer .footer_area .logo {
+  margin-bottom: 40px;
+}
+footer .footer_area .copy_light {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+}
+footer .footer_area .top_btn {
+  position: relative;
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  font-size: 1.3em;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.5);
+}
+footer .footer_area .top_btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-top: 1px rgba(0, 0, 0, 0.5) solid;
+  border-right: 1px rgba(0, 0, 0, 0.5) solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: scroll 2s infinite;
+          animation: scroll 2s infinite;
+}
+footer .footer_area .top_btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-top: 1px rgba(0, 0, 0, 0.5) solid;
+  border-right: 1px rgba(0, 0, 0, 0.5) solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: scroll 2s infinite;
+          animation: scroll 2s infinite;
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+            transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
 }
