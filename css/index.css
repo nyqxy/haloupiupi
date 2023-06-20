@@ -49,7 +49,7 @@ main .mv .mv_area {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 main .mv .mv_area h2 {
   font-size: 1.5em;
