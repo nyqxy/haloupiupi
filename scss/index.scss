@@ -280,10 +280,109 @@ main {
     }
 
     .kihon_area {
-        height: 500px;
-        background-color: #b6fbff;
-        text-align: center;
-        font-size: 2em;
+        padding: 100px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .ttl {
+            display: inline-block;
+            font-size: 4.5em;
+            text-align: center;
+            margin-bottom: 70px;
+            background: -webkit-linear-gradient(0deg, #83A4D4 0%, #B6FBFF 100%);
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 6px 4px rgba(0, 0, 0, .1));
+            
+        }
+        .content_box {
+            background: linear-gradient(90deg, #E2EDFF 0%, #E8FDFF 100%);
+            margin: 0 0 50px;
+            border-radius: 0 30px 0 30px;
+            padding: 30px 10px;
+            .txt_box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 15px;
+                margin-bottom: 15px;
+                .step {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    padding: 10px 0 0;
+                    width: 58px;
+                    height: 58px;
+                    span {
+                        font-size: 2.5em;
+                        font-weight: 200;
+                    }
+                }
+                .txt {
+                    font-size: 1.8em;
+                    line-height: 27px;
+                }
+            }
+            .img {
+                margin-bottom: 60px;
+            }
+            .point_box {
+                position: relative;
+                font-size: 1.9em;
+                line-height: 30px;
+                text-align: center;
+                background-color: #fff;
+                padding: 30px 0;
+                margin-left: 5px;
+                .point {
+                    content: "POINT";
+                    display: block;
+                    position: absolute;
+                    top: -30px;
+                    left: 5px;
+                    width: 58px;
+                    height: 58px;
+                    border-radius: 50%;
+                    background-color: #C8E4FF;
+                    font-size: 10px;
+                    padding: 14px 0 0;
+                    z-index: 9000;
+                }
+            }
+            .point_box::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -5px;
+                top: -5px;
+                width: 345px;
+                height: 120px;
+                border: #000 1px solid;
+                border-image: linear-gradient(90deg, #000 20%, #fff 20%, #fff 30%, #000 30%, #000 70%) 1/0 1 1 1;      
+            }
+            .point_box::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -5px;
+                top: -5px;
+                width: 345px;
+                height: 120px;
+                border: #000 1px solid;
+                border-image: linear-gradient(90deg, #000 70%, #E7F8FF 70%, #E7F8FF 78%, #000 78%, #000 80%) 1/1 0 0;      
+            }
+        }
+        .mov_box {
+            .txt {
+                font-size: 2em;
+                color: #333333;
+                text-align: center;
+                padding: 30px 0;
+            }
+        }
+
     }
 
     .type_area {
