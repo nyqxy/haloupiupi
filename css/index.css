@@ -6,10 +6,21 @@ body {
   font-family: "Hiragino Sans";
   font-weight: 300;
 }
+@media screen and (min-width: 400px) {
+  body {
+    background-color: #000;
+    background: url(../img/bg_pc.jpg) no-repeat;
+    background-size: 100%;
+    padding-top: 50px;
+    background-attachment: fixed;
+  }
+}
 
 .wrapper {
   max-width: 390px;
-  margin: 0 auto;
+  margin: 0 30% 0 60%;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
 }
 
 .mincho {
@@ -32,11 +43,44 @@ body {
   width: 140px;
 }
 
+.wrapper {
+  width: 390px;
+}
 main .mv {
   background: url(../img/mv_bg.jpg) no-repeat;
   background-size: contain;
+  background-position: center top;
   padding: 400px 0 40px;
   margin-bottom: 100px;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  -webkit-animation: mv_load 2s forwards;
+          animation: mv_load 2s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+@-webkit-keyframes mv_load {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+    display: none;
+  }
+}
+@keyframes mv_load {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+    display: none;
+  }
 }
 main .mv .mv_area {
   display: -webkit-box;
@@ -68,69 +112,87 @@ main .mv .mv_area h1 span {
 main .mv .mv_area p {
   letter-spacing: 4px;
 }
-main .mv .scroll {
+main .mv .loader {
   position: relative;
   text-align: center;
   font-size: 1.3em;
   letter-spacing: 4px;
   color: rgba(0, 0, 0, 0.5);
-}
-main .mv .scroll::before {
-  content: "";
-  display: block;
   position: absolute;
-  top: 25px;
-  left: 47%;
-  width: 20px;
-  height: 20px;
-  border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
-  border-left: 1px rgba(0, 0, 0, 0.5) solid;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-animation: scroll 2s infinite;
-          animation: scroll 2s infinite;
+  top: calc(76% - 32px);
+  left: calc(50% - 32px);
+  width: 50px;
+  height: 50px;
 }
-main .mv .scroll::after {
-  content: "";
-  display: block;
+main .mv .loader div {
   position: absolute;
-  top: 35px;
-  left: 47%;
-  width: 20px;
-  height: 20px;
-  border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
-  border-left: 1px rgba(0, 0, 0, 0.5) solid;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-animation: scroll 2s infinite;
-          animation: scroll 2s infinite;
+  top: 30px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0.8;
 }
-@-webkit-keyframes scroll {
+main .mv .one {
+  border-top: 1px solid #189A9A;
+  -webkit-animation: rotate-left 1s linear infinite;
+          animation: rotate-left 1s linear infinite;
+}
+main .mv .two {
+  border-right: 1px solid #96CBB7;
+  -webkit-animation: rotate-right 1s linear infinite;
+          animation: rotate-right 1s linear infinite;
+}
+main .mv .three {
+  border-bottom: 1px solid #85D1E8;
+  -webkit-animation: rotate-right 1s linear infinite;
+          animation: rotate-right 1s linear infinite;
+}
+main .mv .four {
+  border-left: 1px solid #0BA2D1;
+  -webkit-animation: rotate-right 1s linear infinite;
+          animation: rotate-right 1s linear infinite;
+}
+@-webkit-keyframes rotate-left {
   0% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
-  }
-  50% {
-    -webkit-transform: translateY(20px) rotate(-45deg);
-            transform: translateY(20px) rotate(-45deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
-@keyframes scroll {
+@keyframes rotate-left {
   0% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
-  }
-  50% {
-    -webkit-transform: translateY(20px) rotate(-45deg);
-            transform: translateY(20px) rotate(-45deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotate-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 main .nav_area {
@@ -142,6 +204,7 @@ main .nav_area {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 main .nav_area .kihon a {
   position: relative;
@@ -877,8 +940,8 @@ main .nakajima_prf .txt {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0deg, 0%, 100%, 0)), color-stop(50%, hsla(0deg, 0%, 100%, 0.9)), color-stop(0, hsla(0deg, 0%, 100%, 0.9)), to(#fff));
-  background: linear-gradient(180deg, hsla(0deg, 0%, 100%, 0) 0, hsla(0deg, 0%, 100%, 0.9) 50%, hsla(0deg, 0%, 100%, 0.9) 0, #fff);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(50%, hsla(0, 0%, 100%, 0.9)), color-stop(0, hsla(0, 0%, 100%, 0.9)), to(#fff));
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, 0.9) 50%, hsla(0, 0%, 100%, 0.9) 0, #fff);
   content: "";
 }
 
@@ -994,6 +1057,20 @@ footer .footer_area .top_btn::after {
           transform: rotate(45deg);
   -webkit-animation: scroll 2s infinite;
           animation: scroll 2s infinite;
+}
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+            transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
 }
 @keyframes scroll {
   0% {

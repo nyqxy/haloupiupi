@@ -1,3 +1,7 @@
+@import './mixin';
+
+
+
 body {
     font-size: 10px;
     background-color: #FFf;
@@ -5,11 +9,21 @@ body {
     font-family: "Hiragino Sans";
     font-weight: 300;
     // color: #3C3C3C;
+    @include pc {
+        background-color: #000;
+        background: url(../img/bg_pc.jpg) no-repeat;
+        background-size: 100%;
+        padding-top: 50px;
+        background-attachment: fixed;
+    }
 }
 
 .wrapper {
     max-width: 390px;
-    margin: 0 auto;
+    margin: 0 30% 0 60%;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    
 }
 
 .mincho {
@@ -34,12 +48,39 @@ body {
 }
 
 
+.wrapper {
+    width: 390px;
+    @include pc {
+    }
+}
+
 main {
     .mv {
         background: url(../img/mv_bg.jpg) no-repeat;
         background-size: contain;
+        background-position: center top;
         padding: 400px 0 40px;
         margin-bottom: 100px;
+        background-color: #fff;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9000;
+        animation: mv_load 2s forwards;
+        animation-delay: 3s;
+
+        @keyframes mv_load {
+            0% {
+                top: 0;
+            }
+
+            100% {
+                top: -100%;
+                display: none;
+            }
+        }
 
         .mv_area {
             display: flex;
@@ -70,53 +111,67 @@ main {
             }
         }
 
-        .scroll {
+        .loader {
             position: relative;
             text-align: center;
             font-size: 1.3em;
             letter-spacing: 4px;
             color: rgba(0, 0, 0, .5);
-        }
-
-        .scroll::before {
-            content: "";
-            display: block;
             position: absolute;
-            top: 25px;
-            left: 47%;
-            width: 20px;
-            height: 20px;
-            border-bottom: 1px rgba(0, 0, 0, .5) solid;
-            border-left: 1px rgba(0, 0, 0, .5) solid;
-            transform: rotate(-45deg);
-            animation: scroll 2s infinite;
+            top: calc(76% - 32px);
+            left: calc(50% - 32px);
+            width: 50px;
+            height: 50px;
         }
 
-        .scroll::after {
-            content: "";
-            display: block;
+        .loader div {
             position: absolute;
-            top: 35px;
-            left: 47%;
-            width: 20px;
-            height: 20px;
-            border-bottom: 1px rgba(0, 0, 0, .5) solid;
-            border-left: 1px rgba(0, 0, 0, .5) solid;
-            transform: rotate(-45deg);
-            animation: scroll 2s infinite;
+            top: 30px;
+            left: 10px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-sizing: border-box;
+            opacity: .8;
         }
 
-        @keyframes scroll {
+        .one {
+            border-top: 1px solid #189A9A;
+            animation: rotate-left 1s linear infinite;
+        }
+
+        .two {
+            border-right: 1px solid #96CBB7;
+            animation: rotate-right 1s linear infinite;
+        }
+
+        .three {
+            border-bottom: 1px solid #85D1E8;
+            animation: rotate-right 1s linear infinite;
+        }
+
+        .four {
+            border-left: 1px solid #0BA2D1;
+            animation: rotate-right 1s linear infinite;
+        }
+
+        @keyframes rotate-left {
             0% {
-                transform: translateY(0) rotate(-45deg);
-            }
-
-            50% {
-                transform: translateY(20px) rotate(-45deg);
+                transform: rotate(360deg);
             }
 
             100% {
-                transform: translateY(0) rotate(-45deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes rotate-right {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
             }
         }
     }
@@ -125,6 +180,7 @@ main {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        border-radius: 10px 10px 0 0;
 
         .kihon a {
             position: relative;
@@ -284,28 +340,32 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .ttl {
             display: inline-block;
             font-size: 4.5em;
             text-align: center;
             margin-bottom: 70px;
             background: -webkit-linear-gradient(0deg, #83A4D4 0%, #B6FBFF 100%);
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 6px 4px rgba(0, 0, 0, .1));
-            
+
         }
+
         .content_box {
             background: linear-gradient(90deg, #E2EDFF 0%, #E8FDFF 100%);
             margin: 0 0 50px;
             border-radius: 0 30px 0 30px;
             padding: 30px 10px;
+
             .txt_box {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 column-gap: 15px;
                 margin-bottom: 15px;
+
                 .step {
                     display: flex;
                     flex-direction: column;
@@ -315,19 +375,23 @@ main {
                     padding: 10px 0 0;
                     width: 58px;
                     height: 58px;
+
                     span {
                         font-size: 2.5em;
                         font-weight: 200;
                     }
                 }
+
                 .txt {
                     font-size: 1.8em;
                     line-height: 27px;
                 }
             }
+
             .img {
                 margin-bottom: 60px;
             }
+
             .point_box {
                 position: relative;
                 font-size: 1.9em;
@@ -336,6 +400,7 @@ main {
                 background-color: #fff;
                 padding: 30px 0;
                 margin-left: 5px;
+
                 .point {
                     content: "POINT";
                     display: block;
@@ -351,6 +416,7 @@ main {
                     z-index: 9000;
                 }
             }
+
             .point_box::after {
                 content: "";
                 display: block;
@@ -360,8 +426,9 @@ main {
                 width: 345px;
                 height: 120px;
                 border: #000 1px solid;
-                border-image: linear-gradient(90deg, #000 20%, #fff 20%, #fff 30%, #000 30%, #000 70%) 1/0 1 1 1;      
+                border-image: linear-gradient(90deg, #000 20%, #fff 20%, #fff 30%, #000 30%, #000 70%) 1/0 1 1 1;
             }
+
             .point_box::before {
                 content: "";
                 display: block;
@@ -371,9 +438,10 @@ main {
                 width: 345px;
                 height: 120px;
                 border: #000 1px solid;
-                border-image: linear-gradient(90deg, #000 70%, #E7F8FF 70%, #E7F8FF 78%, #000 78%, #000 80%) 1/1 0 0;      
+                border-image: linear-gradient(90deg, #000 70%, #E7F8FF 70%, #E7F8FF 78%, #000 78%, #000 80%) 1/1 0 0;
             }
         }
+
         .mov_box {
             .txt {
                 font-size: 2em;
