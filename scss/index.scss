@@ -1,6 +1,8 @@
 @import './mixin';
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-size: 10px;
@@ -12,17 +14,20 @@ body {
     @include pc {
         background-color: #000;
         background: url(../img/bg_pc.jpg) no-repeat;
-        background-size: 100%;
+        background-size: cover;
         padding-top: 50px;
         background-attachment: fixed;
     }
 }
 
 .wrapper {
-    max-width: 390px;
-    margin: 0 30% 0 60%;
-    background-color: #fff;
-    border-radius: 10px 10px 0 0;
+    @include pc {
+        max-width: 390px;
+        margin: 0 30% 0 60%;
+        background-color: #fff;
+        padding-top: 10px;
+        border-radius: 50px 50px 0 0;
+    }
     
 }
 
@@ -47,11 +52,22 @@ body {
     width: 140px;
 }
 
+.img_266 {
+    width: 266px;
+}
+
+.img_233 {
+    width: 233px;
+}
+
+.img_100 {
+    width: 100px;
+}
+
 
 .wrapper {
     width: 390px;
-    @include pc {
-    }
+
 }
 
 main {
@@ -70,6 +86,7 @@ main {
         z-index: 9000;
         animation: mv_load 2s forwards;
         animation-delay: 3s;
+        display: none;
 
         @keyframes mv_load {
             0% {
@@ -176,24 +193,81 @@ main {
         }
     }
 
+    .logo_hd {
+        padding: 20px;
+    }
+
+
+    .pc_content {
+        display: none;
+        width: 50%;
+        @include pc {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            row-gap: 150px;
+            position: fixed;
+            z-index: 8000;
+            left: 0;
+            bottom: 40px;
+            padding: 0 0 0 40px;
+            .logo_area {
+                .copy {
+                    font-size: 2.5em;
+                    margin-bottom: 32px;
+                }
+            }
+            .pc_bot {
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                justify-content: space-between;
+                .pc_nav {
+                    .nav_arae {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 30px;
+                        li {
+                            font-size: 1.8em;
+                            a {
+                                display: inline-block;
+                                padding: 5px 10px 5px 5px;
+                            }
+                        }
+                        .menu_item.menu_hover a{
+                            background-color: #fff;
+                            color: #189A9A;
+                        }
+                    }
+                }
+                .qr_area {
+                    @media (max-width:1080px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
     .nav_area {
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        border-radius: 10px 10px 0 0;
+        border-radius: 0px 0px 0 0;
 
         .kihon a {
             position: relative;
             display: block;
             text-align: center;
-            font-size: 2.3em;
+            font-size: 2.6em;
             letter-spacing: 2px;
             font-weight: 500;
             background-color: #83a4d4;
             background: linear-gradient(270deg, #83a4d4 0%, #b6fbff 100%);
             padding: 42px 0 42px;
             color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, .2);
+            // box-shadow: 0px 4px 10px rgba(0, 0, 0, .2);
             margin: 0 0 30px;
             transition: .5s;
         }
@@ -202,7 +276,7 @@ main {
             position: absolute;
             top: 0;
             left: 0;
-            content: "基本の使い方";
+            content: "タイプ別の使い方";
             padding: 42px 0 42px;
             display: block;
             width: 100%;
@@ -216,61 +290,61 @@ main {
             transition: .5s;
         }
 
-        .kihon a::before {
-            position: absolute;
-            bottom: 20px;
-            left: 47%;
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-bottom: #fff 2px solid;
-            border-left: #fff 2px solid;
-            transform: rotate(-45deg);
-            z-index: 2000;
-        }
+        // .kihon a::before {
+        //     position: absolute;
+        //     bottom: 20px;
+        //     left: 47%;
+        //     content: "";
+        //     display: block;
+        //     width: 10px;
+        //     height: 10px;
+        //     border-bottom: #fff 2px solid;
+        //     border-left: #fff 2px solid;
+        //     transform: rotate(-45deg);
+        //     z-index: 2000;
+        // }
 
         .type_list {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: wrap;
+            row-gap: 10px;
 
             a {
                 display: block;
-                width: 50%;
+                width: 100%;
             }
 
             li {
                 position: relative;
                 width: 100%;
-                text-align: center;
+                text-align: end;
                 background-color: #b6fbff;
                 font-size: 2.1em;
                 font-weight: 500;
                 line-height: 32px;
-                padding: 174px 0 30px;
+                padding: 24px 17px 24px 0;
                 color: #555555;
             }
 
-            li::after {
-                position: absolute;
-                bottom: 15px;
-                left: 47%;
-                content: "";
-                display: block;
-                width: 10px;
-                height: 10px;
-                border-bottom: #555555 2px solid;
-                border-left: #555555 2px solid;
-                transform: rotate(-45deg);
-                transition: .3s;
+            // li::after {
+            //     position: absolute;
+            //     bottom: 15px;
+            //     left: 47%;
+            //     content: "";
+            //     display: block;
+            //     width: 10px;
+            //     height: 10px;
+            //     border-bottom: #555555 2px solid;
+            //     border-left: #555555 2px solid;
+            //     transform: rotate(-45deg);
+            //     transition: .3s;
+            // }
 
-            }
-
-            li:hover::after {
-                bottom: 10px;
-                transition: .3s;
-            }
+            // li:hover::after {
+            //     bottom: 10px;
+            //     transition: .3s;
+            // }
 
             li.nachu {
                 background: url(../img/li_nachu.jpg) no-repeat;
@@ -336,7 +410,7 @@ main {
     }
 
     .kihon_area {
-        padding: 100px 10px;
+        padding: 100px 10px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -355,9 +429,9 @@ main {
 
         .content_box {
             background: linear-gradient(90deg, #E2EDFF 0%, #E8FDFF 100%);
-            margin: 0 0 50px;
+            margin: 0 0 30px;
             border-radius: 0 30px 0 30px;
-            padding: 30px 10px;
+            padding: 30px 10px 20px;
 
             .txt_box {
                 display: flex;
@@ -389,30 +463,31 @@ main {
             }
 
             .img {
-                margin-bottom: 60px;
+                margin-bottom: 0px;
             }
 
             .point_box {
                 position: relative;
-                font-size: 1.9em;
-                line-height: 30px;
+                font-size: 1.2em;
+                line-height: 12px;
                 text-align: center;
                 background-color: #fff;
-                padding: 30px 0;
+                padding: 13px 0;
                 margin-left: 5px;
+                margin-top: -10px;
 
                 .point {
-                    content: "POINT";
                     display: block;
                     position: absolute;
-                    top: -30px;
+                    top: -13px;
                     left: 5px;
                     width: 58px;
-                    height: 58px;
-                    border-radius: 50%;
-                    background-color: #C8E4FF;
+                    height: 17px;
+                    line-height: 12px;
+                    border-radius: 8.5px;
+                    background-color: #BEEFFF;
                     font-size: 10px;
-                    padding: 14px 0 0;
+                    padding: 3px 0 0;
                     z-index: 9000;
                 }
             }
@@ -421,10 +496,10 @@ main {
                 content: "";
                 display: block;
                 position: absolute;
-                left: -5px;
-                top: -5px;
+                left: -3px;
+                top: -3px;
                 width: 345px;
-                height: 120px;
+                height: 40px;
                 border: #000 1px solid;
                 border-image: linear-gradient(90deg, #000 20%, #fff 20%, #fff 30%, #000 30%, #000 70%) 1/0 1 1 1;
             }
@@ -433,12 +508,12 @@ main {
                 content: "";
                 display: block;
                 position: absolute;
-                left: -5px;
-                top: -5px;
+                left: -3px;
+                top: -3px;
                 width: 345px;
                 height: 120px;
                 border: #000 1px solid;
-                border-image: linear-gradient(90deg, #000 70%, #E7F8FF 70%, #E7F8FF 78%, #000 78%, #000 80%) 1/1 0 0;
+                border-image: linear-gradient(90deg, #000 70%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 78%, #000 78%, #000 80%) 1/1 0 0;
             }
         }
 
@@ -459,7 +534,7 @@ main {
 
         .type_box {
             width: 390px;
-            margin: 0 auto 120px;
+            margin: 0 auto 80px;
             padding-top: 30px;
 
             .ttl {
@@ -1064,7 +1139,7 @@ footer {
             font-weight: normal
         }
 
-        .top_btn {
+        .top_btn a{
             position: relative;
             position: absolute;
             right: 25px;
@@ -1074,7 +1149,7 @@ footer {
             color: rgba(0, 0, 0, .5);
         }
 
-        .top_btn::before {
+        .top_btn a::before {
             content: "";
             display: block;
             position: absolute;
@@ -1088,7 +1163,7 @@ footer {
             animation: scroll 2s infinite;
         }
 
-        .top_btn::after {
+        .top_btn a::after {
             content: "";
             display: block;
             position: absolute;
