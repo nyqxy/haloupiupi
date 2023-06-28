@@ -14,8 +14,26 @@ $(window).scroll(function () {
 $(window).scroll(function () {
     var top = $(".kihon_area").offset().top;
     var position = top - $(window).height();
+    let navLink = document.getElementsByClassName('menu_item');
     if ($(window).scrollTop() > position) {
-        $(".menu_item").addClass('menu_hover');    } 
+        console.log("aa");
+        $(".menu_item").addClass('menu_hover');
+        // $(".menu_item").each(function(){
+        //     if($(this).offset().top > $(window).scrollTop()) {
+        //         $(this).addClass('menu_hover');
+        //     }
+        // })
+    }
     else {
     }
 });
+
+
+
+
+let navLink = document.getElementsByClassName('menu_item');
+for (let i = 0; i < navLink.length; i++) {
+    if (navLink[i].href === location.href) {
+        navLink[i].classList.add('menu_hover');
+    }
+}

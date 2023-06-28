@@ -10,7 +10,7 @@ body {
   font-family: "Hiragino Sans";
   font-weight: 300;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1020px) {
   body {
     background-color: #000;
     background: url(../img/bg_pc.jpg) no-repeat;
@@ -19,14 +19,27 @@ body {
     background-attachment: fixed;
   }
 }
+@media screen and (max-width: 1019px) {
+  body {
+    background: url(../img/bg_pc.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1020px) {
   .wrapper {
     max-width: 390px;
     margin: 0 30% 0 60%;
     background-color: #fff;
     padding-top: 10px;
     border-radius: 50px 50px 0 0;
+  }
+}
+@media screen and (max-width: 1019px) {
+  .wrapper {
+    margin: 0 auto;
+    background-color: #fff;
   }
 }
 
@@ -223,7 +236,7 @@ main .pc_content {
   display: none;
   width: 50%;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1020px) {
   main .pc_content {
     display: block;
     display: -webkit-box;
@@ -281,7 +294,7 @@ main .pc_content {
     color: #189A9A;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 1080px) {
+@media screen and (min-width: 1020px) and (max-width: 1080px) {
   main .pc_content .pc_bot .qr_area {
     display: none;
   }

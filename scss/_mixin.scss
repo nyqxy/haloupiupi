@@ -1,8 +1,15 @@
-$pc: 400px;
+$pc: 1020px;
+$tab: 1019px;
 $sp: 399px;
 
 @mixin pc {
     @media screen and (min-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: ($tab)) {
         @content;
     }
 }
