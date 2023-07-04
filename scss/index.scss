@@ -94,10 +94,12 @@ main {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 9000;
+        z-index: 9990;
         animation: mv_load 2s forwards;
-        animation-delay: 3s;
-        display: none;
+        animation-delay: 2.5s;
+        @include pc {
+            display: none;
+        }
 
         @keyframes mv_load {
             0% {

@@ -91,12 +91,16 @@ main .mv {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9000;
+  z-index: 9990;
   -webkit-animation: mv_load 2s forwards;
           animation: mv_load 2s forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  display: none;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+@media screen and (min-width: 1020px) {
+  main .mv {
+    display: none;
+  }
 }
 @-webkit-keyframes mv_load {
   0% {
