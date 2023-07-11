@@ -75,6 +75,9 @@ body {
     width: 100px;
 }
 
+.img_30 {
+    width: 30px;
+}
 
 .wrapper {
     width: 390px;
@@ -107,7 +110,7 @@ main {
             }
 
             100% {
-                top: -100%;
+                top: -150%;
                 display: none;
             }
         }
@@ -208,6 +211,11 @@ main {
 
     .logo_hd {
         padding: 20px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
 

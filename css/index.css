@@ -75,6 +75,10 @@ body {
   width: 100px;
 }
 
+.img_30 {
+  width: 30px;
+}
+
 .wrapper {
   width: 390px;
 }
@@ -235,6 +239,20 @@ main .mv .four {
 }
 main .logo_hd {
   padding: 20px;
+  padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main .pc_content {
   display: none;
